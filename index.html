@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globla DarkRP Community</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Arkaplan Görseli ve Karartma Katmanı -->
+    <div class="bg-container">
+        <div class="bg-image"></div>
+        <div class="bg-vignette"></div>
+    </div>
+
+    <!-- SAĞ ÜST: Müzik Kontrolü (Açma / Kapatma) -->
+    <div class="music-control-wrapper" id="music-control-wrapper">
+        <div class="music-info-badge" id="music-info-badge">
+            <span class="music-equalizer" id="music-equalizer">
+                <span></span><span></span><span></span>
+            </span>
+            <span class="music-track-name" id="music-track-name">Müzik Yükleniyor...</span>
+        </div>
+        <button class="music-toggle-btn" id="music-toggle-btn" aria-label="Müziği Sesi Aç/Kapat" title="Müziği Aç / Kapat">
+            <svg class="music-icon icon-playing" id="icon-playing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+            <svg class="music-icon icon-muted hidden" id="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
+        </button>
+    </div>
+
+    <!-- SOL KAPSÜL: Kurucu / Yetkili -->
+    <aside class="capsule-left" id="left-capsule">
+        <div class="founder-item">
+            <img class="founder-avatar" id="founder-avatar" src="https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg" alt="Kurucu Avatar">
+            <span class="founder-name" id="founder-name">SifKox</span>
+            <span class="founder-rank" id="founder-rank">Kurucu</span>
+        </div>
+    </aside>
+
+    <!-- ORTA BÖLÜM: Oyuncu Profil & Sunucu Mesajı -->
+    <main class="center-content">
+        <div class="player-avatar-wrapper">
+            <div class="avatar-glow-ring"></div>
+            <img class="player-avatar" id="player-avatar" src="https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg" alt="Oyuncu Avatar">
+        </div>
+        
+        <h1 class="player-name" id="player-name">Yükleniyor...</h1>
+        <p class="server-name" id="server-name">Globla DarkRP Community</p>
+        <p class="message-text" id="rotating-message">Klasik DarkRP tadında.</p>
+    </main>
+
+    <!-- SAĞ KAPSÜL: Yükleme Yüzdesi -->
+    <aside class="capsule-right" id="right-capsule">
+        <span class="percentage-text" id="percentage-val">0%</span>
+    </aside>
+
+    <!-- EN ALT BÖLÜM: Neon Slogan -->
+    <footer class="neon-slogan-container">
+        <p class="neon-slogan" id="server-slogan">Klasik DarkRP tadında.</p>
+    </footer>
+
+    <!-- Gizli Audio Oynatıcı -->
+    <audio id="bg-audio" loop></audio>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
