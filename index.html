@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globla DarkRP Community</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Arkaplan Görseli ve Karartma Katmanı -->
+    <div class="bg-container">
+        <div class="bg-image"></div>
+        <div class="bg-vignette"></div>
+    </div>
+
+    <!-- SAĞ ÜST: Müzik Kontrolü (Açma / Kapatma) -->
+    <div class="music-control-wrapper" id="music-control-wrapper">
+        <div class="music-info-badge" id="music-info-badge">
+            <span class="music-equalizer" id="music-equalizer">
+                <span></span><span></span><span></span>
+            </span>
+            <span class="music-track-name" id="music-track-name">Müzik Yükleniyor...</span>
+        </div>
+        <button class="music-toggle-btn" id="music-toggle-btn" aria-label="Müziği Sesi Aç/Kapat" title="Müziği Aç / Kapat">
+            <svg class="music-icon icon-playing" id="icon-playing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+            <svg class="music-icon icon-muted hidden" id="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="2.5" y1="2.5" x2="21.5" y2="21.5" stroke-width="2.5"></line>
+            </svg>
+        </button>
+    </div>
+
+    <!-- SOL KAPSÜL: Kurucu / Yetkili -->
+    <aside class="capsule-left" id="left-capsule">
+        <div class="founder-item">
+            <img class="founder-avatar" id="founder-avatar" src="https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg" alt="Kurucu Avatar">
+            <span class="founder-name" id="founder-name">SifKox</span>
+            <span class="founder-rank" id="founder-rank">Kurucu</span>
+        </div>
+    </aside>
+
+    <!-- ORTA BÖLÜM: Oyuncu Profil & Sunucu Mesajı -->
+    <main class="center-content">
+        <div class="player-avatar-wrapper">
+            <div class="avatar-glow-ring"></div>
+            <img class="player-avatar" id="player-avatar" src="https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg" alt="Oyuncu Avatar">
+        </div>
+        
+        <h1 class="player-name" id="player-name">Yükleniyor...</h1>
+        <p class="server-name" id="server-name">Globla DarkRP Community</p>
+        <p class="message-text" id="rotating-message">Klasik DarkRP tadında.</p>
+        
+        <!-- İNDİRİLEN DOSYA VE DURUM BİLGİSİ -->
+        <div class="download-status-box" id="download-status-box">
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span class="status-text" id="status-text">Sunucuya Bağlanılıyor...</span>
+            </div>
+            <div class="download-file-wrapper">
+                <span class="download-file-label">İndiriliyor:</span>
+                <span class="download-file-name" id="download-file-name">Dosya listesi bekleniyor...</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- SOL ALT: Sosyal Medya & Bağlantılar -->
+    <div class="social-links-left" id="social-links-left">
+        <a href="https://discord.gg/yourserver" id="btn-discord" target="_blank" class="social-btn btn-discord" title="Discord Sunucumuz">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+            <span>Discord</span>
+        </a>
+        <a href="https://steamcommunity.com/groups/globladarkrp" id="btn-steam" target="_blank" class="social-btn btn-steam" title="Steam Grubu">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59c.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524c2.494 0 4.524 2.03 4.524 4.524c0 2.494-2.03 4.524-4.524 4.524h-.105l-4.076 2.911c.002.043.006.085.006.128c0 1.872-1.517 3.39-3.39 3.39c-1.464 0-2.716-.928-3.192-2.223L.276 15.42C1.656 20.35 6.386 24 11.979 24c6.627 0 12-5.373 12-12s-5.373-12-12-12zm-3.613 14.887a2.001 2.001 0 0 1-1.365-.536l-2.072-.855c.29-.428.766-.717 1.314-.717c.883 0 1.6.716 1.6 1.6c0 .178-.035.347-.093.504l.616.004zm7.599-8.497c-1.381 0-2.5 1.119-2.5 2.5s1.119 2.5 2.5 2.5s2.5-1.119 2.5-2.5s-1.119-2.5-2.5-2.5z"/>
+            </svg>
+            <span>Steam Grubu</span>
+        </a>
+    </div>
+
+    <!-- SAĞ KAPSÜL: Yükleme Yüzdesi -->
+    <aside class="capsule-right" id="right-capsule">
+        <span class="percentage-text" id="percentage-val">0%</span>
+    </aside>
+
+    <!-- EN ALT BÖLÜM: Neon Slogan -->
+    <footer class="neon-slogan-container">
+        <p class="neon-slogan" id="server-slogan">Klasik DarkRP tadında.</p>
+    </footer>
+
+    <!-- Gizli Audio Oynatıcı -->
+    <audio id="bg-audio" loop></audio>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
